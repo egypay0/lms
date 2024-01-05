@@ -12,10 +12,13 @@ export default function Nav() {
   >
     <div className="flex lg:-flex-1">
       <a href="/" className="-m-1.5 p-1.5">
-        Next Authenticatiom
+        Home
       </a>
     </div>
     <Link href="/dashboard">Dashboard</Link>
+    <Link href="/login">login</Link>
+    <Link href="/register">Register</Link>
+
   </nav>
     </header>
   );
