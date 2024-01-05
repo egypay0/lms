@@ -16,6 +16,9 @@ export default function Nav() {
       </a>
     </div>
     <Link href="/dashboard">Dashboard</Link>
+    <Link href="/login">login</Link>
+    <Link href="/register">Register</Link>
+
   </nav>
     </header>
   );
