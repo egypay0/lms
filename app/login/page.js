@@ -1,8 +1,9 @@
- 
 
-export default function Login () {
 
+import LoginForm from "./form";
+
+export default async function Login() {
     return (
-        <div> G</div>
+         <LoginForm/>
     )
 }
