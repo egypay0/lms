@@ -25,7 +25,7 @@ export default async function RootLayout({ children }) {
     
       <div className='flex flex-col items-center justify-between p-24'>
 
-      
+      { !!session && <Logout/>}
       {children}
 
          { !!session && <Logout/>}
