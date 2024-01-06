@@ -2,6 +2,9 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Nav from './component/Nav.js'
  import { getServerSession } from 'next-auth'
+ import Link from 'next/link'
+import Logout from './logout'
+ 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -25,8 +28,8 @@ export default async function RootLayout({ children }) {
       
       {children}
 
-      {session && <span>logout</span>}
-       {!session && <span>login</span>}
+         { !!session && <Logout/>}
+        {!session && <Link href={'/login'}>login</Link>}
       </div>
       
       </body>
