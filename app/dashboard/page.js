@@ -1,17 +1,13 @@
-import React from "react";
-import {getServerSession} from 'next-auth'
-import  {redirect} from 'next/navigation'
-
-export default function DashnoardPage(){
-
-const session = getServerSession();
-
-if (!session)
-{
-   redirect("/login");
-}
-
-    return (
-        <div>Dashboard  Page c</div>
-    )
+ import Image from 'next/image'
+ export default function Home() {
+  return (
+    <main className=" ">
+      <div className=" ">
+         <h1 >Hello</h1>
+           
+      </div>
+ 
+       
+    </main>
+  )
 }

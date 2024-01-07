@@ -12,7 +12,7 @@ const handler = NextAuth({
     strategy:'jwt',
 
   },
-
+   
     providers: [
         CredentialsProvider({
           // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -36,16 +36,20 @@ const handler = NextAuth({
             if (passwordComare){
 
             console.log({passwordComare})
-            return {
+             return {
               id: user.id,
               email : user.email
             }
+            
+
           }
             console.log({credentials});
             return null;
           },
+          
         }),
       ],
+      
        
 
 });

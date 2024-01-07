@@ -1,9 +1,12 @@
+ 
 import { Inter } from 'next/font/google'
-import './globals.css'
+import './ui/globals.css'
 import Nav from './component/Nav.js'
  import { getServerSession } from 'next-auth'
  import Link from 'next/link'
 import Logout from './logout'
+import { SessionProvider } from 'next-auth/react'
+import Sidebar from './ui/dashboard/sidebar/page.jsx'
  
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,22 +17,26 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
 
-  const session = await getServerSession();
+
+
+  const session = await getServerSession({children});
+
+ 
   return (
 
     
 
     <html lang="en">
-      <body className="  min-h-screen ">
+      <body className="    ">
          <Nav />
     
-      <div className='flex flex-col items-center justify-between p-24'>
+      <div className=' '>
 
-      { !!session && <Logout/>}
-      {children}
+      { !!session && <Logout/> }
+        
+      {children} 
 
-         { !!session && <Logout/>}
-        {!session && <Link href={'/login'}>login</Link>}
+         
       </div>
       
       </body>
