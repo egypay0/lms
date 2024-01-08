@@ -4,7 +4,7 @@
     const handelform = async (formData)=>{
    "use server"
    console.log(formData.get("user"))
-   console.log("hello")
+   
 }
     return (
         <div>

@@ -1,8 +1,9 @@
 import styles from './sidebar.module.css'
-import{MdDashboard, MdShoppingBag, MdSupervisedUserCircle} from 'react-icons/md'
+import{MdDashboard, MdLogout, MdShoppingBag, MdSupervisedUserCircle} from 'react-icons/md'
 import MenuLink from './menuLink/menuLink'
 import Image from 'next/image'
-const menuItem =[
+import { auth ,signOut} from '../../../auth'
+ const menuItem =[
     {
     title:"Pages",
     list: [
@@ -60,9 +61,10 @@ icon:<MdShoppingBag/>,
 },
 ]}]
 
-const  Sidebar = () =>{
+const  Sidebar = async () =>{
 
-
+   const session = await auth()
+   console.log(session)
    
 
     return (
@@ -83,6 +85,14 @@ const  Sidebar = () =>{
                 
             ))}</li>
         ))}</ul>
+        <form action={async ()=>{
+            "use server"
+           await signOut()
+        }}>
+        <button className={styles.logout}><MdLogout/> Logout</button> 
+               
+
+        </form>
         </div>
     )
 }

@@ -155,14 +155,15 @@ export const deleteProduct = async (formData) => {
 };
 
 export const authenticate = async (prevState, formData) => {
-  const { username, password } = Object.fromEntries(formData);
+  
+   const { username, password } = Object.fromEntries(formData);
 
-  try {
+   try {
     await signIn("credentials", { username, password });
   } catch (err) {
     if (err.message.includes("CredentialsSignin")) {
       return "Wrong Credentials";
     }
     throw err;
-  }
+  } console.log(password)
 };
