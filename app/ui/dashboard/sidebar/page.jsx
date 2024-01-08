@@ -12,32 +12,50 @@ const menuItem =[
         icon:<MdDashboard/>,
     },
     {
-        title:"Users",
-        path:"/dashboard/users",
+        title:"Food",
+        path:"/dashboard/food",
         icon:<MdSupervisedUserCircle/>,
     },
     {
-        title:"Products",
-        path:"/dashboard/products",
+        title:"Designs",
+        path:"/dashboard/designs",
         icon:<MdShoppingBag/>,
     },
+
+    {
+        title:"Allergens",
+        path:"/dashboard/allergens",
+        icon:<MdShoppingBag/>,
+    },
+    {
+        title:"Food Properties",
+        path:"/dashboard/fproperties",
+        icon:<MdShoppingBag/>,
+    },
+    {
+        title:"Print",
+        path:"/dashboard/print",
+        icon:<MdShoppingBag/>,
+    },
+
+
     ]
 } ,
-{ title:"Ana",
+{ title:"Support",
 list: [
 {
-title:"Dashboard",
-path:"/dashboard",
+title:"Support",
+path:"/support",
 icon:<MdDashboard/>,
 },
 {
 title:"Users",
-path:"/dashboard/users",
+path:"/dashboard/products",
 icon:<MdSupervisedUserCircle/>,
 },
 {
-title:"Products",
-path:"/dashboard/products",
+title:"Setting",
+path:"/test",
 icon:<MdShoppingBag/>,
 },
 ]}]
@@ -52,7 +70,7 @@ const  Sidebar = () =>{
         <div className={styles.user}>
         <Image src="/noavatar.png" className={styles.userImage} alt="" width="50" height="50"/>
         <div className={styles.userDetail}>
-        <span className={styles.userName}> John Joe</span>
+        <span className={styles.userName}> Ahmed</span>
         <span className={styles.userTitle}> Administartor</span>
         </div>
         </div>
