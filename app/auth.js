@@ -41,6 +41,7 @@ export const { signIn, signOut, auth } = NextAuth({
       },
     }),
   ],
+  secret: "NIfu0Q7BK4wJHJrD4freYYRTMt1VolCEVQ08+PWgdOE=",
   // ADD ADDITIONAL INFORMATION TO SESSION
   callbacks: {
     async jwt({ token, user }) {
